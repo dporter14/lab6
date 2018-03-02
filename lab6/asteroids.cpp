@@ -24,6 +24,7 @@ using namespace std;
 #include <GL/glx.h>
 #include "log.h"
 #include "fonts.h"
+#include "davidP.cpp"
 
 //defined types
 typedef float Flt;
@@ -742,6 +743,8 @@ void render()
 	r.bot = gl.yres - 20;
 	r.left = 10;
 	r.center = 0;
+        void showName(Rect &r);
+        showName(r);
 	ggprint8b(&r, 16, 0x00ff0000, "3350 - Asteroids");
 	ggprint8b(&r, 16, 0x00ffff00, "n bullets: %i", g.nbullets);
 	ggprint8b(&r, 16, 0x00ffff00, "n asteroids: %i", g.nasteroids);
